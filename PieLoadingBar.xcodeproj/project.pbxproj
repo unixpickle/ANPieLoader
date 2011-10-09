@@ -1,0 +1,288 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FA1D886514423D370023C4BE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1D886414423D370023C4BE /* UIKit.framework */; };
+		FA1D886714423D370023C4BE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1D886614423D370023C4BE /* Foundation.framework */; };
+		FA1D886914423D370023C4BE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1D886814423D370023C4BE /* CoreGraphics.framework */; };
+		FA1D886F14423D370023C4BE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA1D886D14423D370023C4BE /* InfoPlist.strings */; };
+		FA1D887114423D370023C4BE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1D887014423D370023C4BE /* main.m */; };
+		FA1D887514423D370023C4BE /* PieLoadingBarAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1D887414423D370023C4BE /* PieLoadingBarAppDelegate.m */; };
+		FA1D887814423D370023C4BE /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA1D887614423D370023C4BE /* MainWindow.xib */; };
+		FA1D887B14423D370023C4BE /* PieLoadingBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1D887A14423D370023C4BE /* PieLoadingBarViewController.m */; };
+		FA1D887E14423D370023C4BE /* PieLoadingBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA1D887C14423D370023C4BE /* PieLoadingBarViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FA1D886014423D370023C4BE /* PieLoadingBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PieLoadingBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA1D886414423D370023C4BE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		FA1D886614423D370023C4BE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		FA1D886814423D370023C4BE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		FA1D886C14423D370023C4BE /* PieLoadingBar-Info.plist */ = {isa = PBXFileReference; path = "PieLoadingBar-Info.plist"; sourceTree = "<group>"; };
+		FA1D886E14423D370023C4BE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FA1D887014423D370023C4BE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FA1D887214423D370023C4BE /* PieLoadingBar-Prefix.pch */ = {isa = PBXFileReference; path = "PieLoadingBar-Prefix.pch"; sourceTree = "<group>"; };
+		FA1D887314423D370023C4BE /* PieLoadingBarAppDelegate.h */ = {isa = PBXFileReference; path = PieLoadingBarAppDelegate.h; sourceTree = "<group>"; };
+		FA1D887414423D370023C4BE /* PieLoadingBarAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PieLoadingBarAppDelegate.m; sourceTree = "<group>"; };
+		FA1D887714423D370023C4BE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		FA1D887914423D370023C4BE /* PieLoadingBarViewController.h */ = {isa = PBXFileReference; path = PieLoadingBarViewController.h; sourceTree = "<group>"; };
+		FA1D887A14423D370023C4BE /* PieLoadingBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PieLoadingBarViewController.m; sourceTree = "<group>"; };
+		FA1D887D14423D370023C4BE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/PieLoadingBarViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FA1D885D14423D370023C4BE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA1D886514423D370023C4BE /* UIKit.framework in Frameworks */,
+				FA1D886714423D370023C4BE /* Foundation.framework in Frameworks */,
+				FA1D886914423D370023C4BE /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FA1D885514423D350023C4BE = {
+			isa = PBXGroup;
+			children = (
+				FA1D886A14423D370023C4BE /* PieLoadingBar */,
+				FA1D886314423D370023C4BE /* Frameworks */,
+				FA1D886114423D370023C4BE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FA1D886114423D370023C4BE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FA1D886014423D370023C4BE /* PieLoadingBar.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FA1D886314423D370023C4BE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FA1D886414423D370023C4BE /* UIKit.framework */,
+				FA1D886614423D370023C4BE /* Foundation.framework */,
+				FA1D886814423D370023C4BE /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FA1D886A14423D370023C4BE /* PieLoadingBar */ = {
+			isa = PBXGroup;
+			children = (
+				FA1D887314423D370023C4BE /* PieLoadingBarAppDelegate.h */,
+				FA1D887414423D370023C4BE /* PieLoadingBarAppDelegate.m */,
+				FA1D887614423D370023C4BE /* MainWindow.xib */,
+				FA1D887914423D370023C4BE /* PieLoadingBarViewController.h */,
+				FA1D887A14423D370023C4BE /* PieLoadingBarViewController.m */,
+				FA1D887C14423D370023C4BE /* PieLoadingBarViewController.xib */,
+				FA1D886B14423D370023C4BE /* Supporting Files */,
+			);
+			path = PieLoadingBar;
+			sourceTree = "<group>";
+		};
+		FA1D886B14423D370023C4BE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FA1D886C14423D370023C4BE /* PieLoadingBar-Info.plist */,
+				FA1D886D14423D370023C4BE /* InfoPlist.strings */,
+				FA1D887014423D370023C4BE /* main.m */,
+				FA1D887214423D370023C4BE /* PieLoadingBar-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FA1D885F14423D370023C4BE /* PieLoadingBar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA1D888114423D370023C4BE /* Build configuration list for PBXNativeTarget "PieLoadingBar" */;
+			buildPhases = (
+				FA1D885C14423D370023C4BE /* Sources */,
+				FA1D885D14423D370023C4BE /* Frameworks */,
+				FA1D885E14423D370023C4BE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PieLoadingBar;
+			productName = PieLoadingBar;
+			productReference = FA1D886014423D370023C4BE /* PieLoadingBar.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FA1D885714423D350023C4BE /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = FA1D885A14423D350023C4BE /* Build configuration list for PBXProject "PieLoadingBar" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = FA1D885514423D350023C4BE;
+			productRefGroup = FA1D886114423D370023C4BE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FA1D885F14423D370023C4BE /* PieLoadingBar */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FA1D885E14423D370023C4BE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA1D886F14423D370023C4BE /* InfoPlist.strings in Resources */,
+				FA1D887814423D370023C4BE /* MainWindow.xib in Resources */,
+				FA1D887E14423D370023C4BE /* PieLoadingBarViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FA1D885C14423D370023C4BE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA1D887114423D370023C4BE /* main.m in Sources */,
+				FA1D887514423D370023C4BE /* PieLoadingBarAppDelegate.m in Sources */,
+				FA1D887B14423D370023C4BE /* PieLoadingBarViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FA1D886D14423D370023C4BE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA1D886E14423D370023C4BE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		FA1D887614423D370023C4BE /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA1D887714423D370023C4BE /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		FA1D887C14423D370023C4BE /* PieLoadingBarViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA1D887D14423D370023C4BE /* en */,
+			);
+			name = PieLoadingBarViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FA1D887F14423D370023C4BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		FA1D888014423D370023C4BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FA1D888214423D370023C4BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PieLoadingBar/PieLoadingBar-Prefix.pch";
+				INFOPLIST_FILE = "PieLoadingBar/PieLoadingBar-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		FA1D888314423D370023C4BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PieLoadingBar/PieLoadingBar-Prefix.pch";
+				INFOPLIST_FILE = "PieLoadingBar/PieLoadingBar-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FA1D885A14423D350023C4BE /* Build configuration list for PBXProject "PieLoadingBar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA1D887F14423D370023C4BE /* Debug */,
+				FA1D888014423D370023C4BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA1D888114423D370023C4BE /* Build configuration list for PBXNativeTarget "PieLoadingBar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA1D888214423D370023C4BE /* Debug */,
+				FA1D888314423D370023C4BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FA1D885714423D350023C4BE /* Project object */;
+}
