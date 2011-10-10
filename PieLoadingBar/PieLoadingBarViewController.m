@@ -20,13 +20,34 @@
 
 #pragma mark - View lifecycle
 
-/*
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
+	loadingBar = [(ANPieLoader *)[ANPieLoader alloc] initWithFrame:CGRectMake(10, 10, 300, 300)
+															 style:ANPieLoaderStyleRounded];
+	[loadingBar setProgress:0];
+	[loadingBar setBorderWidth:4];
+	[loadingBar setBorderPadding:4];
+	[loadingBar setProgress:0];
+	[self.view addSubview:loadingBar];
+	[self addProgress];
 }
-*/
+
+- (void)addProgress {
+	static BOOL state = NO;
+	if (!state) {
+		state = YES;
+		[loadingBar moveToProgress:1 duration:3 callback:^(ANPieAnimation * animation) {
+			[self addProgress];
+		}];
+	} else {
+		state = NO;
+		[loadingBar moveToProgress:0 duration:3 callback:^(ANPieAnimation * animation) {
+			[self addProgress];
+		}];
+	}
+}
+
 
 - (void)viewDidUnload
 {
@@ -39,6 +60,14 @@
 {
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+#pragma mark Memory
+
+- (void)dealloc {
+	[loadingBar release];
+	[loadingTimer invalidate];
+	[super dealloc];
 }
 
 @end

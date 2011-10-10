@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ANPieLoader.h"
 
-@interface PieLoadingBarViewController : UIViewController
+@interface PieLoadingBarViewController : UIViewController {
+	NSTimer * loadingTimer;
+	ANPieLoader * loadingBar;
+}
+
+- (void)addProgress;
 
 @end
