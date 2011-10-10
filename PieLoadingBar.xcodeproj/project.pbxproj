@@ -16,8 +16,8 @@
 		FA1D887814423D370023C4BE /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA1D887614423D370023C4BE /* MainWindow.xib */; };
 		FA1D887B14423D370023C4BE /* PieLoadingBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1D887A14423D370023C4BE /* PieLoadingBarViewController.m */; };
 		FA1D887E14423D370023C4BE /* PieLoadingBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA1D887C14423D370023C4BE /* PieLoadingBarViewController.xib */; };
-		FA1D888614423E800023C4BE /* ANPieLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1D888514423E800023C4BE /* ANPieLoader.m */; };
-		FA1D8889144257320023C4BE /* ANPieAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1D8888144257320023C4BE /* ANPieAnimation.m */; };
+		FA1D889014426DD60023C4BE /* ANPieAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1D888D14426DD60023C4BE /* ANPieAnimation.m */; };
+		FA1D889114426DD60023C4BE /* ANPieLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1D888F14426DD60023C4BE /* ANPieLoader.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,10 +35,10 @@
 		FA1D887914423D370023C4BE /* PieLoadingBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PieLoadingBarViewController.h; sourceTree = "<group>"; };
 		FA1D887A14423D370023C4BE /* PieLoadingBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PieLoadingBarViewController.m; sourceTree = "<group>"; };
 		FA1D887D14423D370023C4BE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/PieLoadingBarViewController.xib; sourceTree = "<group>"; };
-		FA1D888414423E800023C4BE /* ANPieLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANPieLoader.h; sourceTree = "<group>"; };
-		FA1D888514423E800023C4BE /* ANPieLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANPieLoader.m; sourceTree = "<group>"; };
-		FA1D8887144257320023C4BE /* ANPieAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANPieAnimation.h; sourceTree = "<group>"; };
-		FA1D8888144257320023C4BE /* ANPieAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANPieAnimation.m; sourceTree = "<group>"; };
+		FA1D888C14426DD60023C4BE /* ANPieAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANPieAnimation.h; sourceTree = "<group>"; };
+		FA1D888D14426DD60023C4BE /* ANPieAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANPieAnimation.m; sourceTree = "<group>"; };
+		FA1D888E14426DD60023C4BE /* ANPieLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANPieLoader.h; sourceTree = "<group>"; };
+		FA1D888F14426DD60023C4BE /* ANPieLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANPieLoader.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +58,7 @@
 		FA1D885514423D350023C4BE = {
 			isa = PBXGroup;
 			children = (
+				FA1D888B14426DD60023C4BE /* ANPieLoader */,
 				FA1D886A14423D370023C4BE /* PieLoadingBar */,
 				FA1D886314423D370023C4BE /* Frameworks */,
 				FA1D886114423D370023C4BE /* Products */,
@@ -91,10 +92,6 @@
 				FA1D887914423D370023C4BE /* PieLoadingBarViewController.h */,
 				FA1D887A14423D370023C4BE /* PieLoadingBarViewController.m */,
 				FA1D887C14423D370023C4BE /* PieLoadingBarViewController.xib */,
-				FA1D888414423E800023C4BE /* ANPieLoader.h */,
-				FA1D888514423E800023C4BE /* ANPieLoader.m */,
-				FA1D8887144257320023C4BE /* ANPieAnimation.h */,
-				FA1D8888144257320023C4BE /* ANPieAnimation.m */,
 				FA1D886B14423D370023C4BE /* Supporting Files */,
 			);
 			path = PieLoadingBar;
@@ -109,6 +106,17 @@
 				FA1D887214423D370023C4BE /* PieLoadingBar-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FA1D888B14426DD60023C4BE /* ANPieLoader */ = {
+			isa = PBXGroup;
+			children = (
+				FA1D888C14426DD60023C4BE /* ANPieAnimation.h */,
+				FA1D888D14426DD60023C4BE /* ANPieAnimation.m */,
+				FA1D888E14426DD60023C4BE /* ANPieLoader.h */,
+				FA1D888F14426DD60023C4BE /* ANPieLoader.m */,
+			);
+			path = ANPieLoader;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,8 +182,8 @@
 				FA1D887114423D370023C4BE /* main.m in Sources */,
 				FA1D887514423D370023C4BE /* PieLoadingBarAppDelegate.m in Sources */,
 				FA1D887B14423D370023C4BE /* PieLoadingBarViewController.m in Sources */,
-				FA1D888614423E800023C4BE /* ANPieLoader.m in Sources */,
-				FA1D8889144257320023C4BE /* ANPieAnimation.m in Sources */,
+				FA1D889014426DD60023C4BE /* ANPieAnimation.m in Sources */,
+				FA1D889114426DD60023C4BE /* ANPieLoader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

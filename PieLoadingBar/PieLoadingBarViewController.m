@@ -25,25 +25,25 @@
     [super viewDidLoad];
 	loadingBar = [(ANPieLoader *)[ANPieLoader alloc] initWithFrame:CGRectMake(10, 10, 300, 300)
 															 style:ANPieLoaderStyleRounded];
-	[loadingBar setProgress:0];
 	[loadingBar setBorderWidth:4];
-	[loadingBar setBorderPadding:4];
-	[loadingBar setProgress:0];
+	[loadingBar setBorderPadding:3];
+	[loadingBar setProgress:0.83];
 	[self.view addSubview:loadingBar];
-	[self addProgress];
+	// [self addProgress];
 }
 
 - (void)addProgress {
 	static BOOL state = NO;
+	// go the other direction after waiting 0.5 seconds
 	if (!state) {
 		state = YES;
 		[loadingBar moveToProgress:1 duration:3 callback:^(ANPieAnimation * animation) {
-			[self addProgress];
+			[self performSelector:@selector(addProgress) withObject:nil afterDelay:0.5];
 		}];
 	} else {
 		state = NO;
 		[loadingBar moveToProgress:0 duration:3 callback:^(ANPieAnimation * animation) {
-			[self addProgress];
+			[self performSelector:@selector(addProgress) withObject:nil afterDelay:0.5];
 		}];
 	}
 }
