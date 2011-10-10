@@ -5,9 +5,9 @@ ANPieLoader is a simple <tt>UIView</tt> subclass for indicating a task's progres
 
 Screenshots
 ===========
-
-![Example square](https://github.com/unixpickle/ANPieLoader/raw/master/square.png)
-![Example circle](https://github.com/unixpickle/ANPieLoader/raw/master/circle.png)
+|                                        Square                                      |                                       Circle                                       |
+|:-----------------------------------------------------------------------------------|-----------------------------------------------------------------------------------:|
+| ![Example square](https://github.com/unixpickle/ANPieLoader/raw/master/square.png) | ![Example circle](https://github.com/unixpickle/ANPieLoader/raw/master/circle.png) |
 
 Sample Code
 ===========
