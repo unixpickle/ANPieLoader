@@ -10,10 +10,9 @@
 #import "ANPieLoader.h"
 
 @interface PieLoadingBarViewController : UIViewController {
-	NSTimer * loadingTimer;
 	ANPieLoader * loadingBar;
 }
 
-- (void)addProgress;
+- (IBAction)setProgress:(UISlider *)sender;
 
 @end

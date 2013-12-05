@@ -18,6 +18,7 @@
 		FA1D887E14423D370023C4BE /* PieLoadingBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA1D887C14423D370023C4BE /* PieLoadingBarViewController.xib */; };
 		FA1D889014426DD60023C4BE /* ANPieAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1D888D14426DD60023C4BE /* ANPieAnimation.m */; };
 		FA1D889114426DD60023C4BE /* ANPieLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1D888F14426DD60023C4BE /* ANPieLoader.m */; };
+		FA9A44FA185029E2006C039B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA9A44F9185029E2006C039B /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		FA1D888D14426DD60023C4BE /* ANPieAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANPieAnimation.m; sourceTree = "<group>"; };
 		FA1D888E14426DD60023C4BE /* ANPieLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANPieLoader.h; sourceTree = "<group>"; };
 		FA1D888F14426DD60023C4BE /* ANPieLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANPieLoader.m; sourceTree = "<group>"; };
+		FA9A44F9185029E2006C039B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		FA1D885514423D350023C4BE = {
 			isa = PBXGroup;
 			children = (
+				FA9A44F9185029E2006C039B /* Default-568h@2x.png */,
 				FA1D888B14426DD60023C4BE /* ANPieLoader */,
 				FA1D886A14423D370023C4BE /* PieLoadingBar */,
 				FA1D886314423D370023C4BE /* Frameworks */,
@@ -145,6 +148,7 @@
 		FA1D885714423D350023C4BE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastUpgradeCheck = 0500;
 			};
 			buildConfigurationList = FA1D885A14423D350023C4BE /* Build configuration list for PBXProject "PieLoadingBar" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -169,6 +173,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA1D886F14423D370023C4BE /* InfoPlist.strings in Resources */,
+				FA9A44FA185029E2006C039B /* Default-568h@2x.png in Resources */,
 				FA1D887814423D370023C4BE /* MainWindow.xib in Resources */,
 				FA1D887E14423D370023C4BE /* PieLoadingBarViewController.xib in Resources */,
 			);
@@ -223,7 +228,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_OBJC_RECEIVER_WEAK = YES;
 				CLANG_WARN_OBJC_REPEATED_USE_OF_WEAK = YES;
@@ -242,6 +246,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -250,7 +255,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_OBJC_RECEIVER_WEAK = YES;
 				CLANG_WARN_OBJC_REPEATED_USE_OF_WEAK = YES;

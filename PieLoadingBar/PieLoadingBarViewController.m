@@ -23,49 +23,21 @@
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
-	loadingBar = [(ANPieLoader *)[ANPieLoader alloc] initWithFrame:CGRectMake(10, 10, 300, 300)
+	loadingBar = [(ANPieLoader *)[ANPieLoader alloc] initWithFrame:CGRectMake(10, 100, 300, 300)
 															 style:ANPieLoaderStyleRounded];
 	[loadingBar setBorderWidth:4];
 	[loadingBar setBorderPadding:3];
-	[loadingBar setProgress:0.83];
+	[loadingBar setProgress:0.5];
 	[self.view addSubview:loadingBar];
-	// [self addProgress];
 }
 
-- (void)addProgress {
-	static BOOL state = NO;
-	// go the other direction after waiting 0.5 seconds
-	if (!state) {
-		state = YES;
-		[loadingBar moveToProgress:1 duration:3 callback:^(ANPieAnimation * animation) {
-			[self performSelector:@selector(addProgress) withObject:nil afterDelay:0.5];
-		}];
-	} else {
-		state = NO;
-		[loadingBar moveToProgress:0 duration:3 callback:^(ANPieAnimation * animation) {
-			[self performSelector:@selector(addProgress) withObject:nil afterDelay:0.5];
-		}];
-	}
+- (IBAction)setProgress:(UISlider *)sender {
+    loadingBar.progress = sender.value;
 }
 
-
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
-}
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
-
-#pragma mark Memory
-
-- (void)dealloc {
-	[loadingTimer invalidate];
 }
 
 @end
