@@ -8,9 +8,6 @@
 
 #import "ANPieLoader.h"
 
-CGFloat npceil (CGFloat orig);
-CGFloat absf (CGFloat afloat);
-
 @implementation ANPieLoader
 
 - (id)initWithFrame:(CGRect)frame style:(ANPieLoaderStyle)aStyle {
@@ -94,7 +91,6 @@ CGFloat absf (CGFloat afloat);
 															duration:duration];
 	if (currentAnimation) {
 		[currentAnimation cancelAnimation];
-		[currentAnimation release];
 	}
 	currentAnimation = animation;
 	[currentAnimation startAnimation];
@@ -106,7 +102,6 @@ CGFloat absf (CGFloat afloat);
 	animation.callback = callback;
 	if (currentAnimation) {
 		[currentAnimation cancelAnimation];
-		[currentAnimation release];
 	}
 	currentAnimation = animation;
 	[currentAnimation startAnimation];
@@ -163,21 +158,21 @@ CGFloat absf (CGFloat afloat);
 	CGPoint boxPoint = CGPointZero;
 	
 	CGFloat factor;
-	if (abs(xPoint) > abs(yPoint)) {
-		factor = absf((inset.size.width / 2) / xPoint);
+	if (fabs(xPoint) > fabs(yPoint)) {
+		factor = fabs((inset.size.width / 2) / xPoint);
 	} else {
-		factor = absf((inset.size.height / 2) / yPoint);
+		factor = fabs((inset.size.height / 2) / yPoint);
 	}
 	
-	boxPoint = CGPointMake(round((self.frame.size.width / 2) + (xPoint * factor)),
-						   round(((self.frame.size.height / 2) - (yPoint * factor))));
+	boxPoint = CGPointMake((self.frame.size.width / 2) + (xPoint * factor),
+						   ((self.frame.size.height / 2) - (yPoint * factor)));
 	
 	// create and stroke a path
 	if (pieColor) CGContextSetFillColorWithColor(context, pieColor);
 	CGContextBeginPath(context);
 	
-	CGContextMoveToPoint(context, round(self.frame.size.width / 2), round(self.frame.size.height / 2));
-	CGContextAddLineToPoint(context, round(self.frame.size.width / 2), round(inset.origin.y));
+	CGContextMoveToPoint(context, self.frame.size.width / 2, self.frame.size.height / 2);
+	CGContextAddLineToPoint(context, self.frame.size.width / 2, inset.origin.y);
 		
 	if (angle > 45) {
 		CGContextAddLineToPoint(context, inset.origin.x + inset.size.width,
@@ -206,21 +201,8 @@ CGFloat absf (CGFloat afloat);
 
 - (void)dealloc {
 	[currentAnimation cancelAnimation];
-	[currentAnimation release];
 	[self setPieColor:NULL];
 	[self setBorderColor:NULL];
-	[super dealloc];
 }
 
 @end
-
-CGFloat npceil (CGFloat orig) {
-	if (orig < 0) {
-		return ceil(orig);
-	}
-	return ceil(orig);
-}
-
-CGFloat absf (CGFloat afloat) {
-	return (afloat < 0 ? -afloat : afloat);
-}

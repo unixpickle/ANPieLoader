@@ -7,6 +7,7 @@
 //
 
 #import "ANPieAnimation.h"
+#import "ANPieLoader.h"
 
 @interface ANPieAnimation (Private)
 
@@ -16,14 +17,13 @@
 
 @implementation ANPieAnimation
 
-@synthesize pie;
 @synthesize callback;
 
 - (id)initWithPie:(ANPieLoader *)aPie start:(float)_start
 			  end:(float)_end duration:(NSTimeInterval)timeInterval {
 	if ((self = [super init])) {
-		pie = aPie;
-		animationStart = [[NSDate date] retain];
+		self.pie = aPie;
+		animationStart = [NSDate date];
 		duration = timeInterval;
 		start = _start;
 		end = _end;
@@ -40,10 +40,11 @@
 }
 
 - (BOOL)isFinished {
-	NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
-	NSDate * date = [NSDate date];
-	NSTimeInterval interval = [date timeIntervalSinceDate:animationStart];
-	[pool drain];
+    NSTimeInterval interval;
+    @autoreleasepool {
+        NSDate * date = [NSDate date];
+        interval = [date timeIntervalSinceDate:animationStart];
+    }
 	if (interval > duration) return YES;
 	return NO;
 }
@@ -65,20 +66,17 @@
 #pragma mark Private
 
 - (void)timerTick {
+    ANPieLoader * pie = self.pie;
 	if ([self isFinished]) {
 		[pie setProgress:end];
 		if (self.callback) self.callback(self);
 		[self cancelAnimation];
-		return;
-	}
-	[pie setProgress:[self progressForTime]];
+	} else [pie setProgress:[self progressForTime]];
 }
 
 - (void)dealloc {
 	self.callback = nil;
 	[self cancelAnimation];
-	[animationStart release];
-	[super dealloc];
 }
 
 @end

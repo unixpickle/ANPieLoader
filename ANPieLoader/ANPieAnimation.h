@@ -13,7 +13,6 @@
 typedef void (^ANPieAnimationCallback)(ANPieAnimation * animation);
 
 @interface ANPieAnimation : NSObject {
-	ANPieLoader * pie;
 	NSDate * animationStart;
 	NSTimeInterval duration;
 	float start, end;
@@ -22,7 +21,7 @@ typedef void (^ANPieAnimationCallback)(ANPieAnimation * animation);
 	ANPieAnimationCallback callback;
 }
 
-@property (readonly) ANPieLoader * pie;
+@property (nonatomic, weak) ANPieLoader * pie;
 @property (nonatomic, copy) ANPieAnimationCallback callback;
 
 - (id)initWithPie:(ANPieLoader *)aPie start:(float)start

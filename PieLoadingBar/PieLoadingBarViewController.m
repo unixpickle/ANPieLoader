@@ -65,9 +65,7 @@
 #pragma mark Memory
 
 - (void)dealloc {
-	[loadingBar release];
 	[loadingTimer invalidate];
-	[super dealloc];
 }
 
 @end
